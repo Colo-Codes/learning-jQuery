@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <!-- Buscar en Google por: embed jquery google -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <style type="text/css">
+    #circle1 {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    #circle2 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Hi!</h1>
+    <div id="circle1"></div>
+    <div id="circle2"></div>
+    <p>This is the original text.</p>
+    <iframe src="http://www.cnn.com"></iframe>
+    <script type="text/javascript">
+      
+      $("#circle1").click(function() {
+        $("p").html("Text has been changed AGAIN!!");
+        // Para obtener el contenido de un elemento HTML:
+        // $("p").html();  
+      })
+      
+      $("#circle1").hover(function() {
+        $("p").html("Text has been changed!");
+      })
+      
+      $("#circle2").click(function() {
+        $("iframe").attr("src", "http://www.bbc.com");
+      })
+      
+    </script>
+  
+  
+  </body>
+</html>
