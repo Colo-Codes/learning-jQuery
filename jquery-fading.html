@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <!-- Buscar en Google por: embed jquery google -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <style type="text/css">
+    #circle {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      border-radius: 50%;
+      margin: 10px;
+      display: block;
+    }
+      
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: orangered;
+      margin: 10px;
+      display: block;
+    }
+
+      #in {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Hi!</h1>
+    <div id="circle"></div>
+    
+    <div class="square"></div>
+    
+    <div class="square"></div>
+    
+    <p id="out">This text will fadeout... </p><button id="fade">FadeOut!</button>
+    <p id="in">This text has just appeared!!</p><button id="fadeIn">Let's there be light!</button>
+
+    
+    <script type="text/javascript">
+
+      $("div").click(function(){
+        
+        //$(this).hide();
+        
+        $(this).fadeOut("slow", function() {
+          alert("FadeOut has finished");
+        });
+        
+      });
+      
+      $("#fade").click(function() {
+        $("#out").fadeOut("slow");
+      });
+    
+      $("#fadeIn").click(function() {
+        $("#in").fadeIn("slow");
+      });
+    </script>
+  
+  
+  </body>
+</html>

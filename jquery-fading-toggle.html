@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <!-- Buscar en Google por: embed jquery google -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body>
+      
+    <p id="text">This text will appear and desappear according to the button.</p>
+    <button id="toggle1">Toggle text 1</button>
+
+    <p id="text2">This is some text !</p>    
+    <button id="toggle2">Toggle Text 2</button>
+    
+    <script type="text/javascript">
+      
+      $("#toggle1").click(function(){
+        if($("#text").css("display") == "none") {
+          $("#text").fadeIn();
+        } else {
+          $("#text").fadeOut();
+        }
+      });
+      
+      // -------- Otra forma: ------------ //
+    
+      var textShowing = true;
+            
+            $("#toggle2").click(function() {
+                
+                if (textShowing) {
+                    
+                    $("#text2").fadeOut(function() {
+                        
+                        textShowing = false;
+                        
+                    });
+                    
+                } else {
+                
+                    $("#text2").fadeIn(function() {
+                        
+                        textShowing = true;
+                        
+                    });
+                    
+                }
+                
+            });
+      
+    </script>
+  
+  
+  </body>
+</html>
