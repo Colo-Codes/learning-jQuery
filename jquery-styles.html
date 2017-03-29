@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <!-- Buscar en Google por: embed jquery google -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <style type="text/css">
+    #circle {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      border-radius: 50%;
+      margin: 10px;
+      display: block;
+    }
+      
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: orangered;
+      margin: 10px;
+      display: block;
+    }
+
+    </style>
+  </head>
+  <body>
+    
+    <h1>Hi!</h1>
+    <div id="circle"></div>
+    
+    <div class="square"></div>
+    
+    <div class="square"></div>
+
+    
+    <script type="text/javascript">
+      
+      $("#circle").click(function(){
+        
+        // Para setear el estilo de algún elemento:
+        // $("#circle").css("width", "200px");
+        // $("#circle").css("background-color", "red");
+        
+        // Para obtener el estilo de algún elemento:
+        // alert($("#circle").css("background-color"));
+        // alert($("body").css("width"));
+        
+      });
+      
+      $("div").click(function(){
+        
+        $(this).css("display", "none");
+        
+        if($(this).attr("id") == "circle") {
+          alert("You have clicked on a " + $(this).attr("id"));  
+        } else {
+          alert("You have clicked on a " + $(this).attr("class"));
+        }
+        
+        
+      })
+    
+    </script>
+  
+  
+  </body>
+</html>
