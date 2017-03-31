@@ -1,0 +1,31 @@
+<html>
+    <head>
+        
+      <title>jQuery</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+        
+        <p></p>
+        
+        <script type="text/javascript">
+          
+          var regex1 = /is/; // Con las barras / / se realiza una búsqueda de lo que contienen.
+          var regex2 = /Great/i; // El "i" es case insensitive.
+          var regex3 = /e/g; // El "g" hace una búsqueda global y devuelve cada match.
+          var texto = "Regex is gReAt";
+          var result1 = texto.match(regex1); // Devuelve lo que encuentra, en este caso: is (o null).
+          var result2 = texto.match(regex2);
+          var result3 = texto.match(regex3);
+          
+          alert(result1);
+          alert(result2);
+          alert(result3);
+
+            
+        
+        </script>
+    </body>
+</html>
