@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="jquery-ui/jquery-ui.js"></script>
+  <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+  <style type="text/css">
+    #draggable {
+      width: 100px;
+      height: 100px;
+      padding: 0.5em;
+    }
+    
+    #containment-wrapper {
+      width: 95%;
+      height: 150px;
+      border: 2px solid #ccc;
+      padding: 10px;
+    }
+    
+    #resizable {
+      width: 150px;
+      height: 150px;
+      padding: 0.5em;
+    }
+    
+    #resizable h3 {
+      text-align: center;
+      margin: 0;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="containment-wrapper">
+    <div id="draggable" class="ui-widget-content">
+      <p>Drag me horizontally!</p>
+    </div>
+  </div>
+  <div id="resizable" class="ui-widget-content">
+    <h3 class="ui-widget-header">Resizable</h3>
+  </div>
+
+
+  <script type="text/javascript">
+    $(function() {
+      $("#draggable").draggable({
+        axis: "x",
+        containment: "#containment-wrapper",
+        scroll: false
+      });
+    });
+
+    // http://jqueryui.com/resizable/
+    $(function() {
+      $("#resizable").resizable({
+        grid: 40,
+        resize: function( event, ui ) {
+          //alert("Hello!");
+          if ($("#resizable").width() > 300) {
+            alert("It grew over 300px!");
+          }
+      }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
